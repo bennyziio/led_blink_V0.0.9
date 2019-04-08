@@ -135,32 +135,32 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-led_blink_with_timer.out \
+led_blink_V0.0.9.out \
 
 EXE_OUTPUTS__QUOTED += \
-"led_blink_with_timer.out" \
+"led_blink_V0.0.9.out" \
 
 BIN_OUTPUTS += \
-led_blink_with_timer.hex \
+led_blink_V0.0.9.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"led_blink_with_timer.hex" \
+"led_blink_V0.0.9.hex" \
 
 
 # All Target
-all: led_blink_with_timer.out
+all: led_blink_V0.0.9.out
 
 # Tool invocations
-led_blink_with_timer.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
+led_blink_V0.0.9.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccsv6/tools/compiler/c2000_6.4.11/bin/cl2000" -v28 -mt -ml --float_support=fpu32 -g --display_error_number --diag_wrap=off --diag_warning=225 -z -m"led_blink_with_timer.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccsv6/tools/compiler/c2000_6.4.11/lib" -i"C:/ti/ccsv6/tools/compiler/c2000_6.4.11/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="led_blink_with_timer_linkInfo.xml" --rom_model -o "led_blink_with_timer.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv6/tools/compiler/c2000_6.4.11/bin/cl2000" -v28 -mt -ml --float_support=fpu32 -g --display_error_number --diag_wrap=off --diag_warning=225 -z -m"led_blink_V0.0.9.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccsv6/tools/compiler/c2000_6.4.11/lib" -i"C:/ti/ccsv6/tools/compiler/c2000_6.4.11/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="led_blink_V0.0.9_linkInfo.xml" --rom_model -o "led_blink_V0.0.9.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-led_blink_with_timer.hex: $(EXE_OUTPUTS)
+led_blink_V0.0.9.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/ti/ccsv6/tools/compiler/c2000_6.4.11/bin/hex2000"  -o "led_blink_with_timer.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccsv6/tools/compiler/c2000_6.4.11/bin/hex2000"  -o "led_blink_V0.0.9.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 

@@ -1,21 +1,5 @@
 //###########################################################################
-// Description
-//! \addtogroup f2833x_example_list
-//! <h1>Cpu Timer (cpu_timer)</h1>
-//!
-//! This example configures CPU Timer0, 1, and 2 and increments
-//! a counter each time the timers asserts an interrupt.
-//!
-//! \b Watch \b Variables \n
-//! - CpuTimer0.InterruptCount
-//! - CpuTimer1.InterruptCount
-//! - CpuTimer2.InterruptCount
-//
-//###########################################################################
-// $TI Release: F2833x/F2823x Header Files and Peripheral Examples V142 $
-// $Release Date: November  1, 2016 $
-// $Copyright: Copyright (C) 2007-2016 Texas Instruments Incorporated -
-//             http://www.ti.com/ ALL RIGHTS RESERVED $
+// released by Bennyziio / 2019.04.08
 //###########################################################################
 
 #include "DSP28x_Project.h"     // Device Headerfile and Examples Include File
@@ -102,14 +86,14 @@ void main(void)
    ConfigCpuTimer(&CpuTimer2, 150, 1000000);
 #endif
 
-#if (CPU_FRQ_100MHZ)
-// Configure CPU-Timer 0, 1, and 2 to interrupt every second:
-// 100MHz CPU Freq, 1 second Period (in uSeconds)
-
-   ConfigCpuTimer(&CpuTimer0, 100, 1000000);
-   ConfigCpuTimer(&CpuTimer1, 100, 1000000);
-   ConfigCpuTimer(&CpuTimer2, 100, 1000000);
-#endif
+//#if (CPU_FRQ_100MHZ)
+//// Configure CPU-Timer 0, 1, and 2 to interrupt every second:
+//// 100MHz CPU Freq, 1 second Period (in uSeconds)
+//
+//   ConfigCpuTimer(&CpuTimer0, 100, 1000000);
+//   ConfigCpuTimer(&CpuTimer1, 100, 1000000);
+//   ConfigCpuTimer(&CpuTimer2, 100, 1000000);
+//#endif
 // To ensure precise timing, use write-only instructions to write to the entire register. Therefore, if any
 // of the configuration bits are changed in ConfigCpuTimer and InitCpuTimers (in DSP2833x_CpuTimers.h), the
 // below settings must also be updated.

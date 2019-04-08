@@ -1,0 +1,8 @@
+/C2000_Lib/
+/cmd/
+/makefile
+/objects.mk
+/source/
+/sources.mk
+/subdir_rules.mk
+/subdir_vars.mk
